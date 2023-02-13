@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang='pt'>
+  <head>
+    <meta char='utf-8'>
+    <link rel='stylesheet' href='styles.css'>
+    <title>SurveyForm</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 
+        id='title'>cassianojs Survey Form
+      </h1>
+      <p 
+        id='description'>Thank you for taking the time to help me improve my portfolio
+      </p>
+    </header>
+
+    <form 
+      id='survey-form' 
+      method="post" 
+      action='https://register-demo.freecodecamp.org'>
+
+      <fieldset>
+        <label 
+          id='name-label' 
+          for='name'>Name:
+          <input 
+            required 
+            id='name' 
+            type='text' 
+            placeholder='João Sidney...'
+          />
+        </label>
+        <label 
+          id='email-label' 
+          for='email'
+        >e-mail:  
+          <input 
+            required 
+            id='email' 
+            type='email' 
+            placeholder='js.argolo@...'
+          />
+        <label> Which option best describes your current role? 
+          <select 
+            id='dropdown' 
+            name='dropdown'>
+            <option 
+              id='0' 
+              value='none' 
+              name='none'>select one...</option>
+            <option 
+              id='curios' 
+              value='Curios' 
+              name='curios'
+            >Curios</option>
+            <option 
+              id='recruiter' 
+              value='Recruiter'
+              name='recruiter'>
+              Recruiter</option>
+            <option 
+              id='other' 
+              value='Other' 
+              name='other'>Other</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <label 
+          id='number-label' 
+          for='number'>What's your score to my portfolio, from 0 to 10?
+          <input 
+            id='number' 
+            type='number' 
+            min='0' 
+            max='10' 
+            placeholder='0 to 10'/>
+      </fieldset>  
+
+      <fieldset>
+        <p>Would you recomend my portfolio?</p>
+          <label for='sure'>
+            <input 
+              name='recomendation' 
+              value='Sure'
+              id='sure' 
+              type='radio' checked>Sure
+            </label>
+          <label for='maybe'>
+            <input 
+              name='recomendation' 
+              value='Maybe'
+              id='maybe' 
+              type='radio'>Maybe
+          </label>
+          <label for='notSure'>
+            <input 
+              name='recomendation' 
+              value='Not Sure'
+              id='notSure' 
+              type='radio'>Not sure
+          </label>
+      </fieldset>
+
+      <fieldset>
+        <p>
+          What are the hardskills that you are searching for?</p>
+        <label>
+          <input 
+            value='Python' 
+            id='python' 
+            name='python' 
+            type='checkbox'>Python
+        </label>
+        <label>
+          <input 
+            value='Java' 
+            id='java' 
+            name='java' 
+            type='checkbox'>Java
+        </label>
+        <label>
+          <input 
+            value='Html' 
+            id='html' 
+            name='html' 
+            type='checkbox'>Html
+        </label>
+        <label>
+          <input 
+            value='CSS' 
+            id='css' 
+            name='css' 
+            type='checkbox'>CSS
+        </label>
+        <label>
+          <input 
+            value='JS' 
+            id='js' 
+            name='js' 
+            type='checkbox'>Java Script
+        </label>
+        <label>
+          <input 
+            value='Power BI' 
+            id='pbi' 
+            name='pbi' 
+            type='checkbox'>Power BI
+        </label>
+        <label>
+          <input 
+            value='Excel' 
+            id='excel' 
+            name='excel' 
+            type='checkbox'>Excel
+        </label>
+        <label>
+          <input 
+            value='Other' 
+            id='other' 
+            name='other' 
+            type='checkbox'>Other
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+      </fieldset>
+      <input type='submit' id='submit' value='Submit'>
+    </form>
+  </body>
+</html>
