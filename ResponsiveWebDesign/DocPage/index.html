@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techinical Documentation</title>
+  </head>
+  
+  <body>
+    <nav id="navbar">
+      <header>Table of Contents </header>
+      <ul> 
+        <li><a class="nav-link" href="#What’s_New_In_Python_3.11">What’s New In Python 3.11</a></li>
+        <li><a class="nav-link" href="#Summary_–_Release_highlights">Summary – Release highlights</a></li>
+        <li><a class="nav-link" href="#New_Features">New Features</a></li>
+        <li><a class="nav-link" href="#Features_Related_to_Type_Hints">Features Related to Type Hints</a></li>
+        <li><a class="nav-link" href="#Other_Language_Changes">Other Language Changes</a></li>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="What’s_New_In_Python_3.11">
+        <header>
+          What’s New In Python 3.11
+        </header>
+        <p>This article explains the new features in Python 3.11, compared to 3.10.</p>
+<p>For full details, see the changelog.</p>
+      </section>   
+
+      <section class="main-section" id="Summary_–_Release_highlights">
+        <header>
+          Summary – Release highlights
+        </header>
+        <ul>
+          <li>New syntax features</li>
+          <li>New built-in features</li>
+          <li>New standard library modules</li>
+          <li>Interpreter improvements</li>
+          <li>New typing features</li>
+          <li>Important deprecations, removals and restrictions</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="New_Features">
+        <header>
+          New Features
+        </header>
+        <p>When printing tracebacks, the interpreter will now point to the exact expression that caused the error, instead of just the line. For example:</p>
+        <code>print(manhattan_distance(p1, p2))</code>
+        <p>PEP 654 introduces language features that enable a program to raise and handle multiple unrelated exceptions simultaneously. The builtin types ExceptionGroup and BaseExceptionGroup make it possible to group exceptions and raise them together, and the new except* syntax generalizes except to match subgroups of exception groups</p>
+      </section>
+
+      <section class="main-section" id="Features_Related_to_Type_Hints">
+        <header>
+          Features Related to Type Hints
+        </header>
+        <p>This section covers major changes affecting PEP 484 type hints and the typing module.</p>
+      </section>
+
+      <section class="main-section" id="Other_Language_Changes">
+        <header>
+          Other Language Changes
+        </header>
+          <p>Starred unpacking expressions can now be used in for statements. (See bpo-46725 for more details.)</p>
+          <code>Movie = {"title": "Black Panther", "year": 2018}</code>
+
+          <p>Asynchronous comprehensions are now allowed inside comprehensions in asynchronous functions. Outer comprehensions implicitly become asynchronous in this case. (Contributed by Serhiy Storchaka in bpo-33346.)</p>
+          <code>class Movie(TypedDict, total=False):</code>
+
+          <p>A TypeError is now raised instead of an AttributeError in with statements and contextlib.ExitStack.enter_context() for objects that do not support the context manager protocol, and in async with statements and contextlib.AsyncExitStack.enter_async_context() for objects not supporting the asynchronous context manager protocol. (Contributed by Serhiy Storchaka in bpo-12022 and bpo-44471.)</p>
+          <code>def __enter__(self) -> Self:</code>
+          <p>Added object.__getstate__(), which provides the default implementation of the __getstate__() method. copying and pickleing instances of subclasses of builtin types bytearray, set, frozenset, collections.OrderedDict, collections.deque, weakref.WeakSet, and datetime.tzinfo now copies and pickles instance attributes implemented as slots. (Contributed by Serhiy Storchaka in bpo-26579.)</p>
+          <code>def caller(
+    arbitrary_string: str,
+    query_string: LiteralString,
+    table_name: LiteralString,
+)</code>
+        <p>Added a -P command line option and a PYTHONSAFEPATH environment variable, which disable the automatic prepending to sys.path of the script’s directory when running a script, or the current directory when using -c and -m. This ensures only stdlib and installed modules are picked up by import, and avoids unintentionally or maliciously shadowing modules with those in a local (and typically user-writable) directory. (Contributed by Victor Stinner in gh-57684.)</p>
+      </section>
+      
+    </main>
+</html>
