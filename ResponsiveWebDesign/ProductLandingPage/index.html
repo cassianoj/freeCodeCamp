@@ -18,18 +18,18 @@
         <img id="header-img" src="/img/logo.jpg" alt="Dev logo">
         <nav id="nav-bar">
             <ul>
-                <li class="nav-link">About</li>
-                <li class="nav-link">How It Works</li>
-                <li class="nav-link">Pricing</li>
-                <li class="nav-link">Get in Contact</li>
+                <li><a class="nav-link" href="#features">About</a></li>
+                <li><a class="nav-link" href="#video"> How It Works</a></li>
+                <li><a class="nav-link" href="#products">Pricing</a></li>
+                <li><a class="nav-link" href="#form">Get in Contact</a></li>
             </ul>
         </nav>
     </header>
     <main class="main">
         <form action="https://www.freecodecamp.com/email-submit" id="form">
-            <h2>Getting in contact with us</h2>
-            <input id="email" type="email" placeholder="user@..."><br>
-            <input type="submit" id="submit" value="Submit">
+            <h2>Getting in contact</h2>
+            <input id="email" type="email" name="email" placeholder="Enter your email address" required>
+            <input class="submit" type="submit" id="submit" value="Submit">
         </form>
 
         <section id="features">
@@ -70,8 +70,42 @@
           </section>
 
         <section id="video">
-
+          <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/Em0R3csNMVE" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay=1; mute=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </section>
+        <section id="products">
+          <div id="product">
+            <div id="productName">
+              <h4>Frontend Developer</h4>
+            </div>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/30nlBGjPRYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h4 id="productValue">$2000.00</h4>
+            <p id="prodDescription"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="submit" id="productButton">Detalhes</button>
+          </div> 
+          <div id="product">
+            <div id="productName">
+              <h4>Backend Developer</h4>
+            </div>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/wXMlMsDvk2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><h4 id="productValue">$2400.00</h4>
+            <p id="prodDescription"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="submit" id="productButton">Detalhes</button>
+          </div> 
+          <div id="product">
+            <div id="productName">
+              <h4>Full Stack</h4>
+            </div>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/Vk50Bvk9ojg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><h4 id="productValue">$3000.00</h4>
+            <p id="prodDescription"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="submit" id="productButton">Detalhes</button>
+          </div> 
+         
+        </section>  
     </main>
     <footer>
         <ul>
